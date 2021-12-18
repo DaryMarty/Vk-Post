@@ -4,9 +4,10 @@ import java.time.LocalDateTime;
 
 public class CommentsInfo {
     private int count;
-    public LocalDateTime created;
-    private String comment;
-    private UserInfo userInfo;
+    private int canPost;
+    private int groupsCanPost;
+    private boolean canClose;
+    private boolean canOpen;
 
     public int getCount() {
         return count;
@@ -16,27 +17,35 @@ public class CommentsInfo {
         this.count = count;
     }
 
-    public LocalDateTime getCreated() {
-        return created;
+    public int getCanPost() {
+        return canPost;
     }
 
-    public void setCreated(LocalDateTime created) {
-        this.created = created;
+    public void setCanPost(int canPost) {
+        this.canPost = canPost;
     }
 
-    public String getComment() {
-        return comment;
+    public int getGroupsCanPost() {
+        return groupsCanPost;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setGroupsCanPost(int groupsCanPost) {
+        this.groupsCanPost = groupsCanPost;
     }
 
-    public UserInfo getUserInfo() {
-        return userInfo;
+    public boolean isCanClose() {
+        return canClose;
     }
 
-    public void setUserInfo(UserInfo userInfo) {
-        this.userInfo = userInfo;
+    public void setCanClose(boolean canClose) {
+        this.canClose = canClose;
+    }
+
+    public boolean isCanOpen() {
+        return canOpen;
+    }
+
+    public void setCanOpen(boolean canOpen) {
+        this.canOpen = canOpen;
     }
 }
